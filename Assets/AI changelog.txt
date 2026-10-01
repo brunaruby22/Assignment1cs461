@@ -1,0 +1,28 @@
+cs461 Game Programming - Assignment 1 AI changelog
+
+Name: Bruna Ruby Andreotti
+Tool used: Gemini for code and unity technical assistance
+Sources: Lecture slides for reinforcement
+
+
+As expected by the course policies, I served as the lead engineer to this assignment, using AI (specifically Gemini) to help me by drafting initial code snippets, mainly for debugging as well as help for when I got stuck using unity itself (color assigning and fixing errors that popped up along the way). I have not only fully reviewed and commented through all my scripts, but also tested and modified for simplicity and effectiveness. My main concern was to be able to complete the assignment with ALL expected features: 1. The hierarchical geometry, 2. The camera control script, and 3. The moving object script.
+
+For the detailed walkthrough for each phase, I will include here an easy to follow structure.
+Mention each step, how I went about it, what were the difficulties and what led me to reach for both technical and coding help from AI.
+
+1. This part of the assignment was honestly the easiest part to follow. As there is no coding involved, working with unity to create the hierarchies of the object I decided to make (a house) was pretty fun overall. As guided, the first script (rotateObject.cs) was a copy and paste from the given code snippet by the professor. Seeing the code structure here helped me be able to work around the other two scripts.
+
+2. For this part, the creation of the CameraControl.cs script was essential for game running movement. As I read through the requirements, I was able to start the script itself but reach for help from Gemini to get some requirements included. The main difficulty for me here is writing c#/unity and knowing the specific built in resources that are available. So I logged questions such as:
+- How to get specific key input from user such as the default w,a,d,s for movement with c# in unity?
+noticed .normalized being used to prevent speed boost.
+After simple help - I ran the game and notice only one object was rotating, and I was able to fix it through applying the script to each of the same prefabs laying onto the game.
+At the end, all three houses were rotating and I played around trying different rotation speeds.
+
+3. For this last script, the MoveObject.cs, I found myself stuck more than expected. It handles moving an object to the required 3+ positions as 'x' is pressed, and should pause when 'c' is pressed, then resume with x again. I chose to have a little more fun and build a simple tree, and that was the object I chose to move around different positions around this little neighborhood of houses I built.
+When starting the script, I got the simple logic of setting 3 different positions, used Vector3 as seen before to have each be able to hold 3 coordinates. Used the same logic from part 2 to implement the key input reading for x and c. However, I reached for help to include the required coroutine and IEnumerator. I wasn't exactly sure how to use those, so ended up accepting code snippets from Gemini, and as per usual, went through the whole code making sense of everything and commenting. There were errors that evolved, such as the fact that my object would go back to the beginning position before resuming, but that was fixed. 
+Gemini Prompts:
+- How do I use coroutines and IEnumerator to move an object through an array of positions over time?
+- After c is pressed, and x to resume movement, why does my object not smoothly follow to the next? it goes back to initial.
+
+
+I played with material creations and structure building. This was great for unity practice overall.
