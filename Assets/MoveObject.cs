@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections; //needed for the use of IEnumerator
+using UnityEngine.InputSystem; //required for input
 
 //script is fully commented to explain code.
 
@@ -24,18 +25,18 @@ public class MoveObject : MonoBehaviour
 
     void Update() //listens to user input and sets changes
     {
-        if (Input.GetKeyDown(KeyCode.X)) //when key 'X' is pressed, the isMoving becomes true and the Coroutine starts the movement in unity
+        if (Keyboard.current != null && Keyboard.current.xKey.wasPressedThisFrame)
         {
-            if (isMoving == false)
+            if (!isMoving)
             {
                 isMoving = true;
                 myCoroutine = StartCoroutine(MoveLoop());
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.C)) //and if 'C' is pressed, the isMoving switches back to false and has the coroutine stop the movement
+        if (Keyboard.current != null && Keyboard.current.cKey.wasPressedThisFrame)
         {
-            if (isMoving == true)
+            if (isMoving)
             {
                 StopCoroutine(myCoroutine);
                 isMoving = false;

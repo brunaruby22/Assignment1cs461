@@ -4,6 +4,8 @@ Name: Bruna Ruby Andreotti
 Tool used: Gemini for code and unity technical assistance
 Sources: Lecture slides for reinforcement
 
+Important Update: I tried exporting the project and reopening as new to see if it was working, and encountered an invalid operation error, due to the 'new input system' apparently.
+I attempted to resolve the issue, but if error pops in again, just switch to 'BOTH' in edit->project settings-> player-> active input handling.
 
 As expected by the course policies, I served as the lead engineer to this assignment, using AI (specifically Gemini) to help me by drafting initial code snippets, mainly for debugging as well as help for when I got stuck using unity itself (color assigning and fixing errors that popped up along the way). I have not only fully reviewed and commented through all my scripts, but also tested and modified for simplicity and effectiveness. My main concern was to be able to complete the assignment with ALL expected features: 1. The hierarchical geometry, 2. The camera control script, and 3. The moving object script.
 
